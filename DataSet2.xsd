@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GymManagementSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GymManagementSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GymManagementSystem.Properties.Settings.GlobalReference.Default.GymManagementSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PaymentTableAdapter" GeneratorDataComponentClassName="PaymentTableAdapter" Name="Payment" UserDataComponentName="PaymentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GymManagementSystemConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT P_ID, P_Method, P_Amount, P_Date, Amount_Received, Balance_Pay, M_NIC FROM dbo.Payment
+P_ID FROM dbo.Payment  WHERE P_Date BETWEEN @from AND @to</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="P_ID" DataSetColumn="P_ID" />
+              <Mapping SourceColumn="P_Method" DataSetColumn="P_Method" />
+              <Mapping SourceColumn="P_Amount" DataSetColumn="P_Amount" />
+              <Mapping SourceColumn="P_Date" DataSetColumn="P_Date" />
+              <Mapping SourceColumn="Amount_Received" DataSetColumn="Amount_Received" />
+              <Mapping SourceColumn="Balance_Pay" DataSetColumn="Balance_Pay" />
+              <Mapping SourceColumn="M_NIC" DataSetColumn="M_NIC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Payment" msprop:Generator_TableClassName="PaymentDataTable" msprop:Generator_TableVarName="tablePayment" msprop:Generator_RowChangedName="PaymentRowChanged" msprop:Generator_TablePropName="Payment" msprop:Generator_RowDeletingName="PaymentRowDeleting" msprop:Generator_RowChangingName="PaymentRowChanging" msprop:Generator_RowEvHandlerName="PaymentRowChangeEventHandler" msprop:Generator_RowDeletedName="PaymentRowDeleted" msprop:Generator_RowClassName="PaymentRow" msprop:Generator_UserTableName="Payment" msprop:Generator_RowEvArgName="PaymentRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="P_ID" msprop:Generator_ColumnVarNameInTable="columnP_ID" msprop:Generator_ColumnPropNameInRow="P_ID" msprop:Generator_ColumnPropNameInTable="P_IDColumn" msprop:Generator_UserColumnName="P_ID" type="xs:int" />
+              <xs:element name="P_Method" msprop:Generator_ColumnVarNameInTable="columnP_Method" msprop:Generator_ColumnPropNameInRow="P_Method" msprop:Generator_ColumnPropNameInTable="P_MethodColumn" msprop:Generator_UserColumnName="P_Method" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="P_Amount" msprop:Generator_ColumnVarNameInTable="columnP_Amount" msprop:Generator_ColumnPropNameInRow="P_Amount" msprop:Generator_ColumnPropNameInTable="P_AmountColumn" msprop:Generator_UserColumnName="P_Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="P_Date" msprop:Generator_ColumnVarNameInTable="columnP_Date" msprop:Generator_ColumnPropNameInRow="P_Date" msprop:Generator_ColumnPropNameInTable="P_DateColumn" msprop:Generator_UserColumnName="P_Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount_Received" msprop:Generator_ColumnVarNameInTable="columnAmount_Received" msprop:Generator_ColumnPropNameInRow="Amount_Received" msprop:Generator_ColumnPropNameInTable="Amount_ReceivedColumn" msprop:Generator_UserColumnName="Amount_Received" type="xs:int" minOccurs="0" />
+              <xs:element name="Balance_Pay" msprop:Generator_ColumnVarNameInTable="columnBalance_Pay" msprop:Generator_ColumnPropNameInRow="Balance_Pay" msprop:Generator_ColumnPropNameInTable="Balance_PayColumn" msprop:Generator_UserColumnName="Balance_Pay" type="xs:int" minOccurs="0" />
+              <xs:element name="M_NIC" msprop:Generator_ColumnVarNameInTable="columnM_NIC" msprop:Generator_ColumnPropNameInRow="M_NIC" msprop:Generator_ColumnPropNameInTable="M_NICColumn" msprop:Generator_UserColumnName="M_NIC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Payment" />
+      <xs:field xpath="mstns:P_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
